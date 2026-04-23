@@ -1,0 +1,7 @@
+"MONGO_URL=\"mongodb://localhost:27017\"
+DB_NAME=\"test_database\"
+CORS_ORIGINS=\"*\"
+JWT_SECRET=\"8f4b9c12e7a1d3456b28f9c0a4d7e2b6f1c8a5d9e3b7f2c4a6d8b0e1f3c5a7d9\"
+ADMIN_EMAIL=\"admin@pipeline.ops\"
+ADMIN_PASSWORD=\"Admin@2026\"
+"
