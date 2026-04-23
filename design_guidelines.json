@@ -1,0 +1,110 @@
+{
+  "project_name": "Data Pipeline Automation & System Monitoring Dashboard",
+  "theme": "Light",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "emotional_tone": "Authoritative, Transparent, Functional, Technical",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F9FAFB",
+    "surface_secondary": "#F3F4F6",
+    "border": "#E5E7EB",
+    "text_primary": "#0A0A0A",
+    "text_secondary": "#4B5563",
+    "primary": "#002FA7",
+    "primary_hover": "#00227A",
+    "primary_foreground": "#FFFFFF",
+    "accent_success": "#10B981",
+    "accent_warning": "#F59E0B",
+    "accent_error": "#EF4444",
+    "accent_running": "#3B82F6",
+    "critical_red": "#FF3B30",
+    "rules": [
+      "No full-screen gradients. Color is for function only.",
+      "Use Signal Red for failures and Klein Blue for active running states.",
+      "Never use pure black or pure grey. Tint darks slightly with blue (#0A0A0A -> #0F172A if softening)."
+    ]
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Cabinet Grotesk, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "IBM Plex Mono, monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl tracking-tight font-black",
+      "h2": "text-2xl tracking-tight font-bold",
+      "h3": "text-xl font-semibold",
+      "body": "text-sm text-zinc-800 leading-relaxed",
+      "labels": "text-xs uppercase tracking-widest font-bold text-zinc-500",
+      "data": "text-sm font-mono tracking-tight",
+      "logs": "text-xs font-mono text-zinc-300 bg-zinc-950 p-4"
+    },
+    "rules": [
+      "Do not use Inter, Roboto, or generic sans for headings.",
+      "Use IBM Plex Mono for cron syntax, log streams, SQL queries, and IDs.",
+      "Uppercase labels must have generous letter spacing (tracking-widest)."
+    ]
+  },
+  "layout_and_spacing": {
+    "strategy": "The 'Control Room' Grid",
+    "spacing_scale": "Dense. Use p-4 and p-6. gap-4 between widgets.",
+    "container": "max-w-[1600px] mx-auto w-full",
+    "grid_structure": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4",
+    "rules": [
+      "Use 'Grid Borders' approach: widgets sit in a border-collapse grid to expose the skeleton.",
+      "No rounded corners on major layout blocks. Max 4px (rounded-sm) on small inputs/buttons.",
+      "Optical alignment: ensure data metrics align perfectly on the left axis."
+    ]
+  },
+  "components": {
+    "cards": "Flat background (bg-white), 1px subtle border (border-border), no shadow. Square edges.",
+    "buttons": "Sharp corners. High contrast. Primary buttons are #0A0A0A or #002FA7.",
+    "tables": "Dense. border-b only for rows. No vertical lines. Mono font for data cells.",
+    "inputs": "Shadcn UI forms. Square borders. focus:ring-2 focus:ring-blue-600 focus:ring-offset-0.",
+    "logs_viewer": "Neo-brutalist terminal. Dark background (#0A0A0A), mono font, green/red/yellow text for severities.",
+    "badges": "Square, pure color background, white text. No soft pastel badges. Raw contrast.",
+    "charts": "Recharts. Use sharp lines (linear, not monotone). No area fills, just precise line graphs."
+  },
+  "motion": {
+    "rules": [
+      "Minimalist. Micro-interactions only.",
+      "Hover: subtle background color shift (e.g., bg-zinc-50 to bg-zinc-100).",
+      "No bouncy spring animations. Use ease-out 150ms."
+    ]
+  },
+  "icons": {
+    "library": "Phosphor Icons (@phosphor-icons/react)",
+    "style": "Regular or Bold weight. No duotone in dashboards."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1638864616270-64041b699a50?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGNvcnBvcmF0ZSUyMGxvZ298ZW58MHx8fHwxNzc2OTIxNTkxfDA&ixlib=rb-4.1.0&q=85",
+        "category": "logo",
+        "description": "Abstract geometric shape for the SaaS brand logo"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762522926157-bcc04bf0b10a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NjgyMzI3OXww&ixlib=rb-4.1.0&q=85",
+        "category": "avatar",
+        "description": "Admin user profile headshot 1"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1769636929388-99eff95d3bf1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NjgyMzI3OXww&ixlib=rb-4.1.0&q=85",
+        "category": "avatar",
+        "description": "Admin user profile headshot 2"
+      }
+    ],
+    "rules": "Never use placeholders. Use these exact URLs."
+  },
+  "accessibility_and_testing": {
+    "contrast": "APCA standard. Ensure dark text on light backgrounds.",
+    "testing_attributes": "All interactive elements MUST have data-testid attributes (kebab-case, role-based)."
+  },
+  "instructions_to_main_agent": [
+    "Use pure HTML/Tailwind for structural layout (grid).",
+    "Use Shadcn UI for complex interactives (Tables, Dialogs, Select), but customize them to be sharp, square, and cardless.",
+    "For the Live Logs viewer, use a dark-themed div with monospace font and custom scrollbar.",
+    "Charts must be rendered using Recharts, formatted strictly with the specified color palette.",
+    "Ensure the layout mimics a high-density 'Control Room' – prioritize data over whitespace."
+  ]
+}
